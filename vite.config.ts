@@ -3,10 +3,12 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  // ✅ Base path for GitHub Pages
+  // ✅ Set base path for GitHub Pages
   base: "/vidyapati-kumar-portfolio/",
 
-  plugins: [react()],
+  plugins: [
+    react(),
+  ],
 
   resolve: {
     alias: {
@@ -15,11 +17,14 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "attached_assets"),
     },
   },
+
   root: path.resolve(__dirname, "client"),
+
   build: {
-    outDir: path.resolve(__dirname, "dist"), // ✅ Change from dist/public to dist
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
   },
+
   server: {
     fs: {
       strict: true,

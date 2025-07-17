@@ -4,6 +4,9 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+  // 🆕 Add base for GitHub Pages
+  base: "/vidyapati-kumar-portfolio/",
+
   plugins: [
     react(),
     runtimeErrorOverlay(),
